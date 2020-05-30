@@ -6,16 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".app.ui.MainActivity">
 
-   <androidx.recyclerview.widget.RecyclerView
-       xmlns:app="http://schemas.android.com/apk/res-auto"
-       android:id="@+id/list_of_countries"
-       android:name="com.shraifel.countries.CountriesListFragment"
+   <FrameLayout
+       android:id="@+id/main_frame"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:layout_marginLeft="16dp"
-       android:layout_marginRight="16dp"
-       app:layoutManager="LinearLayoutManager"
-       tools:context=".app.ui.CountriesListFragment"
-       tools:listitem="@layout/country_item" />
+       android:layout_height="match_parent">
+   </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

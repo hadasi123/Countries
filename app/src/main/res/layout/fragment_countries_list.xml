@@ -1,56 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16sp"
-    tools:context=".app.ui.CountriesListFragment">
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@color/white"
+    tools:context=".app.ui.CountriesFragment">
 
     <LinearLayout
-
+        android:paddingTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:weightSum="1"
         tools:context=".app.ui.CountriesListFragment">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="Order countries by:"/>
-        <Button
-            android:id="@+id/order_by_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:layout_marginLeft="10dp"
-            android:text="Name" />
+            android:layout_weight="0.5"
+            style="@style/title_style"
+            android:textColor="@color/black"
+            android:text="@string/order_by"/>
 
-        <Button
-            android:id="@+id/order_by_size"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#ffffff"
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="0.1"
+            android:id="@+id/arrow"
+            android:src="@mipmap/arrow_up"></ImageView>
+
+        <TextView
+            android:layout_weight="0.2"
+            android:textColor="@color/black"
+            android:id="@+id/order_by_name"
             android:layout_marginLeft="10dp"
-            android:text="Size" />
+            android:text="@string/name"
+            style="@style/title_style" />
+
+        <TextView
+            android:id="@+id/order_by_size"
+            android:layout_weight="0.2"
+            style="@style/title_style"
+            android:textColor="@color/grey"
+            android:text="@string/size" />
 
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/list"
+        android:id="@+id/list_of_countries"
         android:name="com.shraifel.countries.CountriesListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:paddingTop="24dp"
         app:layoutManager="LinearLayoutManager"
         tools:context=".app.ui.CountriesListFragment"
         tools:listitem="@layout/country_item" />
-
 
 </LinearLayout>

@@ -23,9 +23,7 @@ class RetrofitClient {
         service.retrieveCountries().enqueue(callback)
     }
 
-    fun getBordersWithCountry(callback: Callback<List<Country>>){
-        var codes = "ee;col"
+    fun getBordersWithCountry(callback: Callback<List<Country>>, codes: String){
         service.retrieveCountriesByCodes(codes).enqueue(callback)
     }
-
 }

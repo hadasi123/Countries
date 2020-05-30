@@ -1,7 +1,9 @@
 package com.shraifel.countries.app.data
 
 data class Country(
-        val name: String?,
-        val nativeName: String?,
+        val name: String,
+        val nativeName: String,
         val area: Double,
-        val borders: List<String>?)
+        val borders: List<String>?){
+
+}

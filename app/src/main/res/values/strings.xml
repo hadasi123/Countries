@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Countries</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="no_internet_alert">No Internet Connection</string>
-    <string name="no_connection_try_again">Please check your internet connection and try again</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="no_internet_connection_content">Please check your internet connection and try again</string>
+    <string name="order_by">ORDER BY:</string>
+    <string name="name">NAME</string>
+    <string name="size">SIZE</string>
+    <string name="share_borders_with">SHARE BORDERS WITH:</string>
 </resources>

@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".app.ui.CountryInfoFragment">
-
+    tools:context=".app.ui.BordersFragment">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Share borders with:" />
-
+        style="@style/title_style"
+        android:paddingBottom="16dp"
+        android:textColor="@color/black"
+        android:text="@string/share_borders_with" />
     <androidx.recyclerview.widget.RecyclerView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/list_of_borders"
@@ -25,5 +25,4 @@
         app:layoutManager="LinearLayoutManager"
         tools:context=".app.ui.CountriesInfoFragment"
         tools:listitem="@layout/country_item" />
-
 </LinearLayout>
